@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/daa512e1cb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Headerr Section Starts-->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <div class="header-col-1">
+                    <h1>Hi, I'm <span>G.Kundana Siri</span><br>From India</h1>
+                </div>
+                <div class="header-col-2">
+                    <img src="image/photoorange.jpg" alt="user-photo">
+                </div>
+            </div>
+        </div>
+    </div>
+<!---Header Section Ends--->
+
+<!---About Section Starts--->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/photoblue.jpg" alt="user-image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tilte-1">About Me</h1>
+                <p>Passionate and detail-oriented Frontend Developer and UI/UX Designer with a strong foundation in HTML, CSS, and JavaScript. Seeking to leverage my skills in crafting intuitive and responsive user interfaces, with a focus on delivering engaging and user-centered web experiences. Eager to contribute to a dynamic team and drive innovative solutions that enhance user satisfaction and business outcomes.</p>
+                <div class="tab-titles">
+                    <h2 class="tab-links active-link" onclick="opentab('skills')">Skills</h2>
+                    <h2 class="tab-links active-link" onclick="opentab('education')">Education</h2> 
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX :</span>Creating intuitive and user-centered designs. My approach focuses on understanding user behavior, crafting seamless interactions, and ensuring a smooth user journey from start to finish.</li>
+                        <li><span>Web Development :</span>Skilled in developing dynamic, responsive websites and applications using modern web technologies like HTML, CSS, and JavaScript. </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2027</span><br>B.Tech Information Technology - TEC Narasropet </li>
+                        <li><span>2023 - 2027</span><br>Intermediate at Srichaitanya  -  Narasropet </li>
+                        <li><span>2023 - 2027</span><br>SSC at Tiny Tots High School - Narasropet </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--About Section Ends-->
+
+<!--project Section Starts-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title-2">My Projects</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="image/ui.png" alt="Heartbeat">
+                <div class="layer">
+                    <h3>UI/UX</h3>
+                    <p>Heartbeat alert app leverages the capabilities of smartphone cameras, utilizing photoplethysmography (PPG) technology to analyze subtle changes in blood flow beneath the user's fingertip. This translates into real-time heart rate readings, providing valuable insights into one's cardiovascular health during exercise, stress management, or daily activities.</p>
+                    <a href="#https://www.figma.com/proto/5RrPzoJEWcVZirgLELMY7p/Design-System?node-id=140-1298&scaling=scale-down&content-scaling=fixed">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="image/web.png" alt="Web development">
+                <div class="layer">
+                    <h3>Web development</h3>
+                    <p>Heartbeat alert app leverages the capabilities of smartphone cameras, utilizing photoplethysmography (PPG) technology to analyze subtle changes in blood flow beneath the user's fingertip. This translates into real-time heart rate readings, providing valuable insights into one's cardiovascular health during exercise, stress management, or daily activities.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--project Section Ends-->
+
+<!--Contact Section Starts-->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title-3">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope-open-text"></i>g.kundanasiri@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 8919623039</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-whatsapp-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Enter your Message" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © G Kundana Siri  <i class="fa-solid fa-smile-wink"></i></p>
+    </div>
+ </div>
+<!--Contact Section Ends-->
+
+<!---Java Script Section Starts-->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add('active-tab');
+    }
+</script>
+<!--Side NavBar Script-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<!--Google Spreadsheet Script-->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNpHfvM2Mj10m7VsspqPmmweV5gABG-A394DzN5gZfpYMc0dizh7WS__4mlyuLZQad/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+
+    form.addEventListener('submit', e=> {
+        e.preventDefault()
+        fetch(scriptURL,{ method: 'POST', body:new FormData(form)})
+        .then(Response =>{
+            msg.innerHTML = "Thanks for Contacting us! Our team will get in touch with you shortly!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error("Error!",error.message))
+    }                
+    )
+</script>
+
+</body>
+</html>
