@@ -93,7 +93,7 @@
 <!--project Section Ends-->
 
 <!--Contact Section Starts-->
-<div id="Contact">
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -113,8 +113,9 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="6" placeholder="Enter your Message" required></textarea>
                     <button type="submit" class="btn">Submit</button>
+                    <span id="msg"></span>
                 </form>
-                <span id="msg"></span>
+               
             </div>
         </div>
     </div>
@@ -151,7 +152,7 @@
 </script>
 <!--Google Spreadsheet Script-->
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyNpHfvM2Mj10m7VsspqPmmweV5gABG-A394DzN5gZfpYMc0dizh7WS__4mlyuLZQad/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1bUwMMbIyO0-zTUcf3tNBewAq88pb5UIPC0B4oTiF2JxKYuv6Bu3FdBmBRxJlwqsk/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
 
@@ -160,10 +161,7 @@
         e.preventDefault()
         fetch(scriptURL,{ method: 'POST', body:new FormData(form)})
         .then(Response =>{
-            msg.innerHTML = "Thanks for Contacting us! Our team will get in touch with you shortly!"
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
+            msg.innerHTML = "Thanks for Contacting !!"
             form.reset()
         })
         .catch(error => console.error("Error!",error.message))
